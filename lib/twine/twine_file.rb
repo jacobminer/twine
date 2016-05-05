@@ -186,6 +186,7 @@ module Twine
             value = write_value(definition, dev_lang, f)
             if !value && !definition.reference_key
               puts "Warning: #{definition.key} does not exist in developer language '#{dev_lang}'"
+              f.puts "\t\tref = "
             end
             
             if definition.reference_key
